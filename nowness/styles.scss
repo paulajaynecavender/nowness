@@ -17,6 +17,22 @@ $font-bold: 900;
   border-bottom: 1px solid $gold;
 }
 
+@mixin section-layout {
+  @include flex-column-center;
+  width: 100vw;
+}
+@mixin content-layout {
+  @include flex-column-center;
+  width: 100vw;
+}
+@mixin card-layout {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
 // all
 html {
   font-size: 62.5%;
@@ -24,6 +40,7 @@ html {
 * {
   margin: 0;
   padding: 0;
+  // box-sizing: border-box;
 }
 
 body {
@@ -31,6 +48,7 @@ body {
   color: black;
   margin: 0px 0px 10px 0;
   background-color: $lightgrey;
+  width: 100vw;
 }
 ul {
   list-style: none;
@@ -39,59 +57,63 @@ ul {
 //header
 .header {
   background-color: white;
-  // overflow: hidden;
   position: fixed;
   width: 100vw;
 }
 
-#hamburger-input.hidden {
-  position: absolute;
-  left: -100vw;
-}
 .overlay-menu {
   position: absolute;
   top: 50;
   left: 0;
   width: 100vw;
+  height: 100vh;
   background-color: $grey;
-  transform: translateY(100%);
-  background-color: red;
-  z-index: 1000;
+  overflow: hidden;
+  transform: translateY(-120%);
+  transition: transform 0.5s ease-in;
 }
 #hamburger-input:checked ~ .overlay-menu {
-  transform: translateY(4.9%);
+  transform: translateY(5.5%);
 }
 
-.overlay-menu nav ul li {
+.overlay-menu ul li {
   font-weight: $font-regular;
   font-size: 1.4rem;
   padding: 10px 15px;
 }
-.border {
-  border-top: 1px solid $mediumgrey;
-}
-.overlay-menu nav ul li:hover:not(.no-hover) {
+// .border {
+//   border-top: 1px solid $mediumgrey;
+// }
+
+.overlay-menu ul li:hover {
   background-color: white;
   color: black;
   border-left: 2px solid $gold;
 }
-.overlay-menu .icons-container {
-  margin: 0px;
+.overlay-menu .icons-container,
+.connect .icons-container {
+  margin: 5px 30px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-between;
 }
 
 .overlay-menu .icons-container svg {
-  padding: 5px 25px;
-  width: 20px;
+  padding: 10px 25px;
+  width: 18px;
 }
 
+.connect .icons-container svg {
+  padding: 30px;
+  margin: 0px 0 20px 0;
+}
+
+// overlay sites sub-menu
 nav ul ul {
   display: none;
 }
 
-div.row1-header {
+.row1-header {
   display: flex;
   justify-content: space-between;
   height: 20px;
@@ -99,18 +121,24 @@ div.row1-header {
   position: relative;
   flex-wrap: nowrap;
 
+  .row1-header-left {
+    display: flex;
+    position: relative;
+  }
+
   .header-logo {
     height: 18px;
     position: absolute;
-    top: 9px;
-    left: 35px;
+    top: 8px;
+    left: -45px;
   }
   div svg {
     padding: 2px 5px 2px 5px;
   }
 }
-nav ul li:hover {
-  color: $gold;
+.row1-header-right svg:hover,
+.icons-container svg:hover {
+  fill: $gold;
 }
 
 .scroll-menu {
@@ -119,10 +147,9 @@ nav ul li:hover {
   white-space: nowrap;
 }
 
-.scroll-menu nav ul {
+.scroll-menu ul {
   display: flex;
   flex-direction: row;
-  // white-space: nowrap;
 
   li {
     display: inline-block;
@@ -131,19 +158,16 @@ nav ul li:hover {
 }
 
 //main body of content
-
-a {
-  text-decoration: none;
-  font-weight: $font-light;
-  font-size: 1.3rem;
-  color: black;
+nav ul li:hover {
+  color: $gold;
 }
+
 h1 {
   font-weight: $font-bold;
   font-size: 2.3rem;
   padding: 20px;
 }
-.label,
+
 p {
   font-weight: $font-light;
   font-size: 1.4rem;
@@ -158,18 +182,24 @@ h3 {
   font-size: 1.8rem;
   padding: 15px 0;
 }
+.label {
+  font-size: 1.4rem;
+  font-weight: $font-light;
+}
 
 .small {
   font-size: 1.2rem;
-  .sign-in {
+  .sign-in a {
     color: $gold;
   }
 }
+// nav lists font style
 div ul li {
   font-weight: $font-light;
   font-size: 1.2rem;
 }
-.button {
+.button,
+.button1 {
   background-color: $lightgrey;
   font-weight: $font-light;
   font-family: nunito;
@@ -179,14 +209,13 @@ div ul li {
   margin: 20px;
   box-sizing: border-box;
   height: 41px;
+  &:hover {
+    color: $gold;
+    box-shadow: 0px -1px $gold inset;
+  }
 }
 
-.button:hover {
-  color: $gold;
-  box-shadow: 0px -1px $gold inset;
-}
-
-div .icons-container {
+.icons-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -194,14 +223,6 @@ div .icons-container {
   margin-top: 20px;
   margin-bottom: 20px;
   flex-direction: row;
-}
-
-a :hover {
-  fill: $gold;
-}
-
-a svg:hover {
-  border-bottom: 1px solid black;
 }
 
 div.switches {
@@ -228,35 +249,41 @@ div.switches {
   overflow: auto;
   @include gold-border;
   padding: 30px 0;
+  width: 100vw;
 }
 .recent-uploads-card {
   @include flex-column-center;
   text-align: center;
-  width: 300px;
+  width: 200px;
   padding-right: 20px;
 }
 
 // no-direct-flight
 .no-direct-flight {
-  @include flex-column-center;
-  @include gold-border;
+  @include section-layout;
+}
+.no-direct-flight-content {
+  @include content-layout;
 }
 .no-direct-flight-content-card {
-  width: 370px;
-  padding-bottom: 20px;
-  flex-wrap: wrap;
-  display: flex;
-  direction: column;
+  @include card-layout;
+  img {
+    width: 90vw;
+  }
 }
 
 // around-the-world
 .around-the-world {
-  @include flex-column-center;
-  @include gold-border;
+  @include section-layout;
+}
+.around-the-world-content {
+  @include content-layout;
 }
 .around-the-world-content-card {
-  width: 370px;
-  padding-bottom: 20px;
+  @include card-layout;
+  img {
+    width: 90vw;
+  }
 }
 
 // subscribe-to-newsletter
@@ -265,6 +292,7 @@ div.switches {
   @include gold-border;
   .subscribe-title {
     text-align: center;
+    width: 100vw;
   }
   p {
     padding: 5px 0 5px;
@@ -278,26 +306,36 @@ div.switches {
   }
   form {
     @include flex-column-center;
-    width: 350px;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 20px;
   }
 }
 
 // most-watched
-.most-watched,
-.most-watched-content,
+.most-watched {
+  @include section-layout();
+}
 .most-watched-sub {
-  @include flex-column-center;
-  padding-bottom: 5px;
+  @include content-layout;
 }
 .most-watched-content {
-  text-align: center;
   width: 400px;
+}
+.most-watched-content-card {
+  @include card-layout;
+  text-align: center;
+  justify-content: center;
+  width: auto;
+  img {
+    width: auto;
+  }
+}
+.most-watched-all {
+  @include gold-border;
 }
 .h3-most-watched {
   padding: 10px;
-}
-.most-watched {
-  @include gold-border;
 }
 
 //share-the-love
@@ -309,12 +347,15 @@ div.switches {
   display: flex;
   flex-direction: column;
 }
+.social-detail {
+  display: none;
+}
 
 // become-a-member
 .become-a-member {
   @include flex-column-center;
   text-align: center;
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
 
 // connect
@@ -324,26 +365,28 @@ div.switches {
   .h2-connect {
     font-size: 1.3rem;
   }
-  .icons-container a {
-    padding: 40px;
-  }
 }
 
+// more to love
+.more-to-love {
+  @include section-layout;
+  border-style: none;
+}
+
+.more-to-love-content {
+  @include content-layout;
+}
+
+.more-to-love-content-card {
+  @include card-layout;
+  width: 200px;
+  img {
+    width: 200px;
+  }
+}
 h3.light {
   font-weight: $font-light;
   padding: 10px 0px 5px;
-}
-
-.more-to-love,
-.more-to-love-content,
-.more-to-love-card {
-  @include flex-column-center;
-}
-.more-to-love-content {
-  width: 200px;
-  p {
-    padding-bottom: 50px;
-  }
 }
 
 // footer
@@ -351,24 +394,26 @@ h3.light {
 footer .social-banner .icons-container {
   @include gold-border;
   border-top: 1px solid $gold;
-  a {
-    padding: 40px;
+  svg {
+    padding: 30px;
   }
 }
 
 footer p,
 li {
   font-size: 1.2rem;
-  padding: 20px;
+  padding: 10px;
 }
 
 .links-end ul {
   @include flex-column-center;
   margin: 20px 0 60px;
+  // li:hover {
+  //   color: $gold;
+  // }
 }
 div.copyright {
   @include flex-column-center;
-  // justify-content: space-between; -- for large screen
   p {
     justify-items: center;
     text-align: center;
@@ -376,6 +421,9 @@ div.copyright {
 }
 
 // toggle //
+.slider {
+  z-index: -1;
+}
 .switch {
   --button-width: 3.5em;
   --button-height: 2em;
@@ -444,3 +492,311 @@ div.copyright {
   );
 }
 // toggle end//
+
+// hamburger
+.Menu-container {
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  margin: 10% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -8px;
+  left: 0px;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  transition: 0.4s ease;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  top: -8px;
+  transition: 0.4s ease;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  top: 8px;
+}
+
+#hamburger-input:checked + label #active {
+  transform: rotate(45deg);
+  background-color: $gold;
+}
+
+#hamburger-input:checked + label #active::before {
+  transform: rotate(-90deg) translateX(-8px);
+  background-color: $gold;
+}
+
+#hamburger-input:checked + label #active::after {
+  display: none;
+}
+.black-time-box {
+  background-color: black;
+  width: 50px;
+  height: 25px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 2px 0 1px 5px;
+  position: relative;
+}
+.time {
+  position: absolute;
+  margin: 0;
+}
+@media screen and (min-width: 750px) {
+  .overlay-menu {
+    width: 250px;
+    height: 100vh;
+  }
+  #hamburger-input:checked ~ .overlay-menu {
+    transform: translateY(4.5%);
+  }
+  .today {
+    padding-top: 80px;
+  }
+
+  // no-direct-flight
+  .no-direct-flight {
+    width: 100vw;
+  }
+  .no-direct-flight-content {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .no-direct-flight-content-card {
+    padding: 0 10px;
+    width: 200px;
+    flex: auto;
+
+    img {
+      width: auto;
+    }
+  }
+
+  // more-to-love
+  .more-to-love {
+    width: 100vw;
+  }
+  .more-to-love-content {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .more-to-love-content-card {
+    padding: 0 10px;
+    width: 200px;
+    flex: auto;
+
+    img {
+      width: auto;
+    }
+  }
+
+  // around-the-world
+  .around-the-world {
+    width: 100vw;
+  }
+  .around-the-world-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .around-the-world-content-left,
+  .around-the-world-content-right {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .around-the-world-content-card {
+    flex: auto;
+    width: 400px;
+    img {
+      width: auto;
+    }
+  }
+  //share-the-love
+  .share-the-love {
+    @include flex-column-center;
+  }
+
+  .share-the-love-content {
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 250px;
+    }
+  }
+  .share-the-love-content-card {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    .button1 {
+      display: none;
+    }
+  }
+  .share-the-love-right {
+    @include flex-column-center;
+  }
+  .social-detail {
+    display: contents;
+    @include flex-column-center;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    justify-content: space-evenly;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .connect .icons-container {
+    justify-content: center;
+    align-content: center;
+    svg {
+      width: 30px;
+      margin: 15px;
+    }
+  }
+  .connect .h2-connect {
+    font-size: 1.7rem;
+  }
+  .scroll-menu ul {
+    justify-content: center;
+  }
+  .p-join {
+    width: 500px;
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div.copyright {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    margin: 30px 20px;
+  }
+  nav.links-end ul {
+    flex-direction: row;
+    margin: 20px 20px;
+    justify-content: center;
+    width: 100vw;
+  }
+  div.row1-header {
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+  }
+
+  .around-the-world-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .around-the-world-content-left {
+    display: flex;
+    flex-direction: row;
+  }
+  .around-the-world-content-right {
+    display: flex;
+    flex-direction: row;
+  }
+  .around-the-world-content-card {
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 300px;
+  }
+  .community {
+    display: flex;
+    @include gold-border;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+  }
+  .community-div {
+    padding: 50px;
+  }
+  .connect {
+    display: block;
+    border: none;
+    height: 250px;
+    justify-content: center;
+  }
+  .become-a-member {
+    display: block;
+    padding: 0;
+    height: 250px;
+    justify-content: center;
+    border-right: 1px solid black;
+    padding: 30px;
+  }
+  .most-watched-all {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+  }
+  .move-to-love-content {
+    padding: 0 20px;
+  }
+  .more-to-love-content-card {
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 200px;
+    }
+  }
+  .more-to-love-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .no-direct-flight-content-card {
+    box-sizing: border-box;
+    width: 300px;
+  }
+  .main-content {
+    @include flex-column-center;
+  }
+  .today,
+  .today-image,
+  .recent-uploads,
+  .no-direct-flight-content,
+  .around-the-world-content,
+  .subscribe-to-newsletter,
+  .most-watched-all,
+  .share-the-love,
+  .community-div,
+  .more-to-love-content {
+    width: 1000px;
+  }
+  .no-direct-flight-content,
+  .around-the-world-content {
+    @include gold-border;
+  }
+}
