@@ -59,6 +59,7 @@ ul {
   background-color: white;
   position: fixed;
   width: 100vw;
+  padding-top: 10px;
 }
 
 .overlay-menu {
@@ -126,15 +127,16 @@ nav ul ul {
     position: relative;
   }
 
-  .header-logo {
-    height: 18px;
-    position: absolute;
-    top: 8px;
-    left: -45px;
-  }
   div svg {
     padding: 2px 5px 2px 5px;
   }
+}
+
+.header-logo {
+  height: 18px;
+  position: absolute;
+  top: 8px;
+  left: -45px;
 }
 .row1-header-right svg:hover,
 .icons-container svg:hover {
@@ -707,11 +709,6 @@ div.copyright {
     justify-content: center;
     width: 100vw;
   }
-  div.row1-header {
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-  }
 
   .around-the-world-content {
     flex-direction: row;
@@ -760,6 +757,9 @@ div.copyright {
     flex-direction: row;
     width: 100vw;
   }
+  .most-watched-content-card {
+    padding: 10px;
+  }
   .move-to-love-content {
     padding: 0 20px;
   }
@@ -778,7 +778,6 @@ div.copyright {
 
   .no-direct-flight-content-card {
     box-sizing: border-box;
-    width: 300px;
   }
   .main-content {
     @include flex-column-center;
@@ -793,10 +792,32 @@ div.copyright {
   .share-the-love,
   .community-div,
   .more-to-love-content {
-    width: 1000px;
+    max-width: 1200px;
   }
   .no-direct-flight-content,
   .around-the-world-content {
     @include gold-border;
+  }
+
+  .row1-header {
+    box-sizing: border-box;
+    width: 1000px;
+    padding: 10px 150px;
+    height: 90px;
+    align-items: center;
+    margin: auto;
+  }
+  .Menu-container {
+    top: 0;
+  }
+  .header-logo {
+    height: 100px;
+    top: auto;
+    left: auto;
+    position: relative;
+  }
+
+  html {
+    display: flex;
   }
 }
