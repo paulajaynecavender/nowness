@@ -75,9 +75,11 @@
                 </ul>
               </ul>
             </nav>
-            <svg class="header-logo" width="500px" viewBox="0 0 20 5">
-              <use href="#main-logo"></use>
-            </svg>
+            <h1>
+              <svg class="header-logo" width="500px" viewBox="0 0 20 5">
+                <use href="#main-logo"></use>
+              </svg>
+            </h1>
           </div>
 
           <div class="row1-header-right">
@@ -112,107 +114,125 @@
 
     <!-- main content -->
 
-    <!-- <div class="main-content">
-      <div class="today">
-        <div>
-          <div><img class="today-image" src="./images/image-test7.jpg" alt="" /></div>
-            <div class="today-image-text">
-             <h1>Title Text Here</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="main-content">
+      <div class="today container">
+        <div class="headline-container">
+          <picture class="headline-image">
+            <source
+              media="(max-width: 599px)"
+              srcset="./images/img-today-s.jpg"
+            />
+
+            <source
+              media="(min-width: 600px)"
+              srcset="./images/img-today-l.jpg"
+            />
+
+            <img src="./images/img-today-l.jpg" alt="today-image" />
+          </picture>
+
+          <div class="play-circle">
+            <img src="./icons/play-circle.svg" height="40px" />
+          </div>
+        </div>
+        <div class="today-text">
+          <h2>Title Text Here</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <div class="recent-uploads container">
+        <div class="card-container">
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
+          </div>
+          <div class="recent-uploads-card">
+            <p>October 3</p>
+            <img src="./images/image-test-6.jpg" alt="" width="200" />
+            <p>here is a title of something recently uploaded</p>
           </div>
         </div>
       </div>
-  
-      <div class="recent-uploads">
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-        <div class="recent-uploads-card">
-          <p>October 3</p>
-          <img src="./images/image-test-6.jpg" alt="" width="200" />
-          <p>here is a title of something recently uploaded</p>
-        </div>
-      </div>
-  
-      <div class="no-direct-flight">
+
+      <!-- <div class="no-direct-flight">
         <h2>NO DIRECT FLIGHT</h2>
         <div class="no-direct-flight-content">
           <div class="no-direct-flight-content-card">
             <img src="./images/iamge-test5.jpg" width="370" alt="" />
             <h3>Title of Text</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-              reprehenderit quos, ab rem fuga quasi dolor similique consequatur
-              eos explicabo sed mollitia hic deleniti animi beatae nesciunt
-              laboriosam quidem reiciendis!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque reprehenderit quos, ab rem fuga quasi dolor similique
+              consequatur eos explicabo sed mollitia hic deleniti animi beatae
+              nesciunt laboriosam quidem reiciendis!
             </p>
           </div>
           <div class="no-direct-flight-content-card">
             <img src="./images/iamge-test5.jpg" width="370" alt="" />
             <h3>Title of Text</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-              reprehenderit quos, ab rem fuga quasi dolor similique consequatur
-              eos explicabo sed mollitia hic deleniti animi beatae nesciunt
-              laboriosam quidem reiciendis!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque reprehenderit quos, ab rem fuga quasi dolor similique
+              consequatur eos explicabo sed mollitia hic deleniti animi beatae
+              nesciunt laboriosam quidem reiciendis!
             </p>
           </div>
           <div class="no-direct-flight-content-card">
             <img src="./images/iamge-test5.jpg" width="370" alt="" />
             <h3>Title of Text</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-              reprehenderit quos, ab rem fuga quasi dolor similique consequatur
-              eos explicabo sed mollitia hic deleniti animi beatae nesciunt
-              laboriosam quidem reiciendis!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque reprehenderit quos, ab rem fuga quasi dolor similique
+              consequatur eos explicabo sed mollitia hic deleniti animi beatae
+              nesciunt laboriosam quidem reiciendis!
             </p>
           </div>
         </div>
-      </div>
-  
-      <div class="around-the-world">
+      </div> -->
+
+      <!-- <div class="around-the-world">
         <h2>AROUND THE WORLD</h2>
         <div class="around-the-world-content">
           <div class="around-the-world-content-left">
@@ -220,16 +240,16 @@
               <img src="./images/image-test4.jpg" alt="" width="370" />
               <h3>Title of Text</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                reprehenderit quos
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque reprehenderit quos
               </p>
             </div>
             <div class="around-the-world-content-card">
               <img src="./images/image-test4.jpg" alt="" width="370" />
               <h3>Title of Text</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                reprehenderit quos
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque reprehenderit quos
               </p>
             </div>
           </div>
@@ -238,23 +258,23 @@
               <img src="./images/image-test4.jpg" alt="" width="370" />
               <h3>Title of Text</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                reprehenderit quos
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque reprehenderit quos
               </p>
             </div>
             <div class="around-the-world-content-card">
               <img src="./images/image-test4.jpg" alt="" width="370" />
               <h3>Title of Text</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                reprehenderit quos
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque reprehenderit quos
               </p>
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="subscribe-to-newsletter">
+      </div> -->
+
+      <!-- <div class="subscribe-to-newsletter">
         <div class="subscribe-title">
           <h2 class="h2-subscribe">SUBSCRIBE TO THE NOWNESS NEWSLETTER</h2>
           <p>Be the first to hear about our latest releases</p>
@@ -264,7 +284,7 @@
           action="https://form-reader.netlify.app/.netlify/functions/formReader"
         >
           <input type="text" name="email" placeholder="Email" />
-  
+
           <div class="checkboxes">
             <div class="switches">
               <label class="switch">
@@ -275,7 +295,7 @@
                 >I would like to receive the NOWNESS NEWSLETTER</span
               >
             </div>
-  
+
             <div class="switches">
               <label class="switch">
                 <input type="checkbox" name="exclusive-offers" value="yes" />
@@ -287,28 +307,13 @@
               >
             </div>
           </div>
-  
+
           <button class="button">SUBSCRIBE</button>
         </form>
-      </div>
-  
-      <div class="most-watched">
+      </div> -->
+
+      <!-- <div class="most-watched">
         <div class="most-watched-all">
-            <div class="most-watched-sub">
-              <h2>MOST WATCHED</h2>
-              <div class="most-watched-content">
-                <div class="most-watched-content-card">
-                  <img src="./images/image-test3.jpg" width="370" alt="" />
-                  <h3 class="h3-most-watched">Title of Text</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Doloremque reprehenderit quos, ab rem fuga quasi dolor similique
-                    consequatur
-                  </p>
-                </div>
-              </div>
-            </div>
-    
           <div class="most-watched-sub">
             <h2>MOST WATCHED</h2>
             <div class="most-watched-content">
@@ -317,16 +322,31 @@
                 <h3 class="h3-most-watched">Title of Text</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloremque reprehenderit quos, ab rem fuga quasi dolor similique
-                  consequatur
+                  Doloremque reprehenderit quos, ab rem fuga quasi dolor
+                  similique consequatur
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="most-watched-sub">
+            <h2>MOST WATCHED</h2>
+            <div class="most-watched-content">
+              <div class="most-watched-content-card">
+                <img src="./images/image-test3.jpg" width="370" alt="" />
+                <h3 class="h3-most-watched">Title of Text</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque reprehenderit quos, ab rem fuga quasi dolor
+                  similique consequatur
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="share-the-love">
+      </div> -->
+
+      <!-- <div class="share-the-love">
         <h2>SHARE THE LOVE</h2>
         <div class="share-the-love-content">
           <div class="share-the-love-left">
@@ -358,9 +378,9 @@
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="community-div">
+      </div> -->
+
+      <!-- <div class="community-div">
         <div class="community">
           <div class="become-a-member">
             <p class="p-join">
@@ -401,9 +421,9 @@
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="more-to-love">
+      </div> -->
+
+      <!-- <div class="more-to-love">
         <h2>MORE TO LOVE</h2>
         <div class="more-to-love-content">
           <div class="more-to-love-content-card">
@@ -437,10 +457,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
-    <footer>
+    <!-- <footer>
       <div class="social-banner">
         <div class="icons-container">
           <svg width="25px" viewBox="0 0 25 25">
@@ -489,7 +509,7 @@
         <p>Ⓒ 2022 MODERN MOBILE DIGITAL MEDIA CO. LTD. ALL RIGHTS RESERVED.</p>
         <p>粤ICP备10213522号</p>
       </div>
-    </footer> -->
+    </footer>  -->
 
     <!-- social logos -->
     <svg display="none">
