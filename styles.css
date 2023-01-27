@@ -113,11 +113,18 @@ svg.header-logo {
 }
 
 .overlay-menu .icons-container,
-.connect .icons-container {
+.connect .icons-container,
+.social-banner .icons-container {
   margin: 5px 30px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-between;
+  margin: 3rem 6rem;
+}
+.overlay-menu .icons-container svg,
+.connect .icons-container svg,
+.social-banner .icons-container svg {
+  margin-bottom: 6rem;
 }
 
 .overlay-menu .icons-container svg {
@@ -399,12 +406,6 @@ nav ul ul {
 .connect {
   text-align: center;
 }
-.connect .icons-container {
-  margin: 3rem 6rem;
-}
-.connect .icons-container svg {
-  margin-bottom: 6rem;
-}
 
 .more-to-love-content {
   display: flex;
@@ -429,4 +430,42 @@ nav ul ul {
 
 h3.more {
   padding: 10px 0px 5px;
+}
+
+.social-banner .icons-container {
+  margin: 0;
+  padding: 0 3rem;
+}
+.social-banner .icons-container svg {
+  margin: 3rem;
+}
+
+footer p,
+li {
+  font-size: 1.2rem;
+  padding: 2rem 0;
+}
+
+.links-end ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 60px;
+  list-style: none;
+  font-weight: 200;
+}
+.links-end ul li:hover {
+  color: #c9a16e;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+.copyright p {
+  justify-items: center;
+  text-align: center;
+  font-weight: 200;
 }/*# sourceMappingURL=styles.css.map */
