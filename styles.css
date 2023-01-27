@@ -142,7 +142,7 @@ nav ul ul {
 .today {
   text-align: center;
   width: 100%;
-  padding: 10rem 0 2.5rem 0;
+  padding: 9rem 0 2.5rem 0;
 }
 
 .headline-image img {
@@ -199,7 +199,7 @@ nav ul ul {
 .card-container {
   display: flex;
   overflow: auto;
-  padding: 3rem 0 3rem 12rem;
+  padding: 0 0 3rem 12rem;
 }
 
 .no-direct-flight-content-container,
