@@ -1,0 +1,122 @@
+// colours
+$gold: #c9a16e;
+$lightgrey: #ffffff;
+$mediumgrey: #dcdcdc;
+$darkgrey: #ffffff;
+$grey: #f8f8f8;
+$font-light: 200;
+$font-regular: 700;
+$font-bold: 900;
+
+// resets
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: nunito, sans-serif;
+  color: black;
+  background-color: $lightgrey;
+}
+
+//header
+.header-container {
+  position: fixed;
+  width: 100%;
+}
+.row1-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: nowrap;
+  margin-right: 4.5rem;
+  .row1-header-left {
+    display: flex;
+  }
+}
+svg.header-logo {
+  width: 18rem;
+  padding: 0 6rem 0 1.5rem;
+}
+.icon {
+  padding: 0.5rem;
+}
+
+.row1-header-right svg:hover,
+.icons-container svg:hover {
+  fill: $gold;
+}
+
+.scroll-menu {
+  border-top: 1px solid $mediumgrey;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scroll-menu ul {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+// drop-down menu - TO FIX
+.overlay-menu {
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey;
+  overflow: hidden;
+  transform: translateY(-120%);
+  transition: transform 0.5s ease-in;
+}
+#hamburger-input:checked ~ .overlay-menu {
+  transform: translateY(5.5%);
+}
+
+.overlay-menu ul li {
+  font-weight: $font-regular;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+}
+// .border {
+//   border-top: 1px solid $mediumgrey;
+// }
+
+.overlay-menu ul li:hover {
+  background-color: white;
+  color: black;
+  border-left: 2px solid $gold;
+}
+.overlay-menu .icons-container,
+.connect .icons-container {
+  margin: 5px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+}
+
+.overlay-menu .icons-container svg {
+  padding: 10px 25px;
+  width: 18px;
+}
+
+.connect .icons-container svg {
+  padding: 30px;
+  margin: 0px 0 20px 0;
+}
+
+// overlay sites sub-menu
+nav ul ul {
+  display: none;
+}
