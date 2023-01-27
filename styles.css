@@ -125,11 +125,6 @@ svg.header-logo {
   width: 18px;
 }
 
-.connect .icons-container svg {
-  padding: 30px;
-  margin: 0px 0 20px 0;
-}
-
 nav ul ul {
   display: none;
 }
@@ -368,6 +363,7 @@ nav ul ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 0;
 }
 
 .share-the-love-card {
@@ -377,4 +373,35 @@ nav ul ul {
 
 .social-detail {
   display: none;
+}
+
+.become-a-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem 7rem 2rem;
+}
+
+.join {
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+.small {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.small .sign-in a {
+  color: #c9a16e;
+}
+
+.connect {
+  text-align: center;
+}
+.connect .icons-container {
+  margin: 3rem 6rem;
+}
+.connect .icons-container svg {
+  margin-bottom: 6rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -146,11 +146,6 @@ svg.header-logo {
   width: 18px;
 }
 
-.connect .icons-container svg {
-  padding: 30px;
-  margin: 0px 0 20px 0;
-}
-
 // overlay sites sub-menu
 nav ul ul {
   display: none;
@@ -360,6 +355,7 @@ nav ul ul {
     box-shadow: 0px -1px $gold inset;
   }
 }
+
 // most-watched
 .most-watched {
   padding-top: 0;
@@ -383,6 +379,7 @@ nav ul ul {
 //share-the-love
 .share-the-love {
   @include flex-column-center;
+  padding-bottom: 0;
 }
 .share-the-love-card {
   display: flex;
@@ -390,4 +387,31 @@ nav ul ul {
 }
 .social-detail {
   display: none;
+}
+// become-a-member
+.become-a-member {
+  @include flex-column-center;
+  text-align: center;
+  padding: 2rem 2rem 7rem 2rem;
+}
+.join {
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+.small {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  .sign-in a {
+    color: $gold;
+  }
+}
+// connect
+.connect {
+  text-align: center;
+  .icons-container {
+    margin: 3rem 6rem;
+    svg {
+      margin-bottom: 6rem;
+    }
+  }
 }
