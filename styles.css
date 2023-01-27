@@ -330,7 +330,6 @@ nav ul ul {
   padding: 10px 40px;
   font-size: 1.4rem;
   margin: 20px;
-  box-sizing: border-box;
   height: 41px;
 }
 .button:hover,
@@ -363,4 +362,19 @@ nav ul ul {
 }
 .most-watched-content-card img {
   max-width: 100%;
+}
+
+.share-the-love {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.share-the-love-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-detail {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

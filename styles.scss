@@ -354,7 +354,6 @@ nav ul ul {
   padding: 10px 40px;
   font-size: 1.4rem;
   margin: 20px;
-  box-sizing: border-box;
   height: 41px;
   &:hover {
     color: $gold;
@@ -377,8 +376,18 @@ nav ul ul {
   align-items: center;
   margin-top: 2.5rem;
   margin-bottom: 0;
-  // justify-content: center;
   img {
     max-width: 100%;
   }
+}
+//share-the-love
+.share-the-love {
+  @include flex-column-center;
+}
+.share-the-love-card {
+  display: flex;
+  flex-direction: column;
+}
+.social-detail {
+  display: none;
 }
