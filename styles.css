@@ -337,4 +337,30 @@ nav ul ul {
 .button1:hover {
   color: #c9a16e;
   box-shadow: 0px -1px #c9a16e inset;
+}
+
+.most-watched {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.most-watched h3 {
+  padding-bottom: 2rem;
+}
+
+.most-watched-content-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+.most-watched-content-card img {
+  max-width: 100%;
 }/*# sourceMappingURL=styles.css.map */
