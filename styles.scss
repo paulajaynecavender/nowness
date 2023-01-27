@@ -26,18 +26,13 @@ body {
 @mixin gold-border {
   border-bottom: 1px solid $gold;
 }
-@mixin section-layout {
-  @include flex-column-center;
-}
-@mixin content-layout {
-  @include flex-column-center;
-}
 @mixin card-layout {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 100%;
   justify-content: flex-start;
   margin-bottom: 25px;
+  object-fit: cover;
 }
 @mixin flex-column-center {
   display: flex;
@@ -45,10 +40,27 @@ body {
   align-items: center;
 }
 
+h3 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  padding-bottom: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.description-1 {
+  font-size: 1.7rem;
+  font-weight: lighter;
+}
+
 //header
 .header-container {
   position: fixed;
   width: 100%;
+  z-index: 999;
+  background-color: #ffffff;
 }
 .row1-header {
   display: flex;
@@ -144,16 +156,15 @@ nav ul ul {
 
 // container
 .container {
-  padding-bottom: 3rem;
+  padding: 0 2rem 2.5rem 2rem;
 }
 
 // today
-
 .today {
   text-align: center;
   @include gold-border;
   width: 100%;
-  padding-top: 10.8rem;
+  padding: 10.8rem 0 2.5rem 0;
 }
 .headline-image {
   img {
@@ -185,6 +196,12 @@ nav ul ul {
   transform: translate(-50%, -50%);
 }
 
+// recent uploads
+.recent-uploads {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .recent-uploads-card {
   @include flex-column-center;
   text-align: center;
@@ -204,4 +221,15 @@ nav ul ul {
   overflow: auto;
   @include gold-border;
   padding: 3rem 0 3rem 12rem;
+}
+
+// no-direct-flight
+.no-direct-flight-content-container {
+  @include flex-column-center;
+}
+.no-direct-flight-content-card {
+  @include card-layout;
+  img {
+    width: 100%;
+  }
 }
