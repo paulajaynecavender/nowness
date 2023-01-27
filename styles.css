@@ -58,9 +58,10 @@ h4 {
 .row1-header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding-top: 1rem;
   flex-wrap: nowrap;
-  margin-right: 4.5rem;
+  margin-left: 1rem;
+  margin-right: 4rem;
   background-color: #ffffff;
 }
 .row1-header .row1-header-left {
@@ -70,11 +71,11 @@ h4 {
 
 svg.header-logo {
   width: 18rem;
-  padding: 0 6rem 0 1.5rem;
+  padding: 0.2rem 6rem 0 1rem;
 }
 
 .icon {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .row1-header-right svg:hover,
@@ -473,8 +474,6 @@ li {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -8px;
-  left: 0px;
 }
 
 .line {
