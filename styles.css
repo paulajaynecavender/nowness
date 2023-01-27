@@ -16,7 +16,7 @@ body {
 
 h3 {
   text-align: center;
-  font-weight: lighter;
+  font-weight: 200;
   font-size: 1.8rem;
   padding-bottom: 2.5rem;
 }
@@ -28,7 +28,7 @@ h4 {
 
 .description-1 {
   font-size: 1.7rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .line-border {
@@ -155,7 +155,7 @@ nav ul ul {
 }
 .today-text p {
   font-size: 1.4rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .headline-container {
@@ -183,7 +183,7 @@ nav ul ul {
 }
 .recent-uploads-card p {
   font-size: 1.3rem;
-  font-weight: lighter;
+  font-weight: 200;
   padding: 0.6rem;
 }
 .recent-uploads-card p:nth-child(3) {
@@ -322,10 +322,10 @@ nav ul ul {
   font-weight: 200;
   font-family: nunito;
   border-width: 1px;
-  padding: 10px 40px;
+  padding: 1rem 4rem;
   font-size: 1.4rem;
-  margin: 20px;
-  height: 41px;
+  margin: 2rem;
+  height: 4.1rem;
 }
 .button:hover,
 .button1:hover {
@@ -385,12 +385,12 @@ nav ul ul {
 
 .join {
   font-size: 1.6rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .small {
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 .small .sign-in a {
   color: #c9a16e;
@@ -404,4 +404,29 @@ nav ul ul {
 }
 .connect .icons-container svg {
   margin-bottom: 6rem;
+}
+
+.more-to-love-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-to-love-content-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  margin-bottom: 5rem;
+}
+.more-to-love-content-card img {
+  width: 200px;
+}
+
+h3.more {
+  padding: 10px 0px 5px;
 }/*# sourceMappingURL=styles.css.map */

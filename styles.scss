@@ -39,7 +39,7 @@ body {
 
 h3 {
   text-align: center;
-  font-weight: lighter;
+  font-weight: $font-light;
   font-size: 1.8rem;
   padding-bottom: 2.5rem;
 }
@@ -49,7 +49,7 @@ h4 {
 }
 .description-1 {
   font-size: 1.7rem;
-  font-weight: lighter;
+  font-weight: $font-light;
 }
 .line-border {
   border-color: $gold;
@@ -177,7 +177,7 @@ nav ul ul {
   }
   p {
     font-size: 1.4rem;
-    font-weight: lighter;
+    font-weight: $font-light;
   }
 }
 .headline-container {
@@ -204,7 +204,7 @@ nav ul ul {
   padding-right: 20px;
   p {
     font-size: 1.3rem;
-    font-weight: lighter;
+    font-weight: $font-light;
     padding: 0.6rem;
   }
   p:nth-child(3) {
@@ -346,10 +346,10 @@ nav ul ul {
   font-weight: $font-light;
   font-family: nunito;
   border-width: 1px;
-  padding: 10px 40px;
+  padding: 1rem 4rem;
   font-size: 1.4rem;
-  margin: 20px;
-  height: 41px;
+  margin: 2rem;
+  height: 4.1rem;
   &:hover {
     color: $gold;
     box-shadow: 0px -1px $gold inset;
@@ -396,11 +396,11 @@ nav ul ul {
 }
 .join {
   font-size: 1.6rem;
-  font-weight: lighter;
+  font-weight: $font-light;
 }
 .small {
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: $font-light;
   .sign-in a {
     color: $gold;
   }
@@ -414,4 +414,20 @@ nav ul ul {
       margin-bottom: 6rem;
     }
   }
+}
+// more to love
+.more-to-love-content {
+  @include flex-column-center;
+}
+
+.more-to-love-content-card {
+  @include card-layout;
+  width: 200px;
+  margin-bottom: 5rem;
+  img {
+    width: 200px;
+  }
+}
+h3.more {
+  padding: 10px 0px 5px;
 }
