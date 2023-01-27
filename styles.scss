@@ -23,9 +23,6 @@ body {
   background-color: $lightgrey;
 }
 // mixins
-@mixin gold-border {
-  border-bottom: 1px solid $gold;
-}
 @mixin card-layout {
   display: flex;
   flex-direction: column;
@@ -53,6 +50,11 @@ h4 {
 .description-1 {
   font-size: 1.7rem;
   font-weight: lighter;
+}
+.line-border {
+  border-color: $gold;
+  border-style: solid none none none;
+  border-width: 0.1rem;
 }
 
 //header
@@ -156,13 +158,12 @@ nav ul ul {
 
 // container
 .container {
-  padding: 0 2rem 2.5rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
 // today
 .today {
   text-align: center;
-  @include gold-border;
   width: 100%;
   padding: 10.8rem 0 2.5rem 0;
 }
@@ -219,17 +220,44 @@ nav ul ul {
 .card-container {
   display: flex;
   overflow: auto;
-  @include gold-border;
   padding: 3rem 0 3rem 12rem;
 }
 
-// no-direct-flight
-.no-direct-flight-content-container {
+// no-direct-flight & around the world
+.no-direct-flight-content-container,
+.around-the-world-content-container {
   @include flex-column-center;
 }
-.no-direct-flight-content-card {
+
+.content-card {
   @include card-layout;
   img {
     width: 100%;
+  }
+}
+
+// subscribe-to-newsletter
+.subscribe-to-newsletter {
+  @include flex-column-center;
+  @include gold-border;
+  .subscribe-title {
+    text-align: center;
+    width: 100vw;
+  }
+  p {
+    padding: 5px 0 5px;
+  }
+  input {
+    width: 320px;
+    padding: 10px;
+    color: $lightgrey;
+    margin: 15px;
+    border-width: 2px;
+  }
+  form {
+    @include flex-column-center;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 20px;
   }
 }

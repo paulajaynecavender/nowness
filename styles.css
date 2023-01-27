@@ -31,6 +31,12 @@ h4 {
   font-weight: lighter;
 }
 
+.line-border {
+  border-color: #c9a16e;
+  border-style: solid none none none;
+  border-width: 0.1rem;
+}
+
 .header-container {
   position: fixed;
   width: 100%;
@@ -129,12 +135,11 @@ nav ul ul {
 }
 
 .container {
-  padding: 0 2rem 2.5rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
 .today {
   text-align: center;
-  border-bottom: 1px solid #c9a16e;
   width: 100%;
   padding: 10.8rem 0 2.5rem 0;
 }
@@ -193,17 +198,17 @@ nav ul ul {
 .card-container {
   display: flex;
   overflow: auto;
-  border-bottom: 1px solid #c9a16e;
   padding: 3rem 0 3rem 12rem;
 }
 
-.no-direct-flight-content-container {
+.no-direct-flight-content-container,
+.around-the-world-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.no-direct-flight-content-card {
+.content-card {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -212,6 +217,6 @@ nav ul ul {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.no-direct-flight-content-card img {
+.content-card img {
   width: 100%;
 }/*# sourceMappingURL=styles.css.map */
