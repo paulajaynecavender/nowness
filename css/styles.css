@@ -99,43 +99,6 @@ svg.header-logo {
   font-size: 1.2rem;
 }
 
-.overlay-menu {
-  position: absolute;
-  top: 40px;
-  left: -10px;
-  width: 100vw;
-  height: 100vh;
-  z-index: -10;
-  background-color: #f8f8f8;
-  overflow: hidden;
-  transform: translateY(-120%);
-  transition: transform 0.5s ease-in;
-}
-.overlay-menu .icons-container svg {
-  width: 1.8rem;
-  margin: 0.5rem;
-}
-
-#hamburger-input:checked ~ .overlay-menu {
-  transform: translateY(5.5%);
-}
-
-.overlay-menu ul li {
-  font-weight: 700;
-  font-size: 1.4rem;
-  padding: 10px 15px;
-}
-
-.overlay-menu ul li:hover {
-  background-color: white;
-  color: black;
-  border-left: 2px solid #c9a16e;
-}
-
-nav ul ul {
-  display: none;
-}
-
 .container {
   padding: 2.5rem 2rem;
 }
@@ -259,85 +222,6 @@ nav ul ul {
 .switches .description-1 {
   padding: 0;
   padding-left: 2rem;
-}
-
-.slider {
-  z-index: -1;
-}
-
-.switch {
-  --button-width: 3.5em;
-  --button-height: 2em;
-  --toggle-diameter: 1.5em;
-  --button-toggle-offset: calc(
-    (var(--button-height) - var(--toggle-diameter)) / 2
-  );
-  --toggle-shadow-offset: 10px;
-  --toggle-wider: 3em;
-  --color-grey: #aeaeae;
-  --color-green: #c9a16e;
-}
-
-.slider {
-  display: inline-block;
-  width: var(--button-width);
-  height: var(--button-height);
-  background-color: var(--color-grey);
-  border-radius: calc(var(--button-height) / 2);
-  position: relative;
-  transition: 0.3s all ease-in-out;
-}
-
-.slider::after {
-  content: "";
-  display: inline-block;
-  width: var(--toggle-diameter);
-  height: var(--toggle-diameter);
-  background-color: #fff;
-  border-radius: calc(var(--toggle-diameter) / 2);
-  position: absolute;
-  top: var(--button-toggle-offset);
-  transform: translateX(var(--button-toggle-offset));
-  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
-  transition: 0.3s all ease-in-out;
-}
-
-.switch input[type=checkbox]:checked + .slider {
-  background-color: var(--color-green);
-}
-
-.switch input[type=checkbox]:checked + .slider::after {
-  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
-  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
-}
-
-.switch input[type=checkbox] {
-  display: none;
-}
-
-.switch input[type=checkbox]:active + .slider::after {
-  width: var(--toggle-wider);
-}
-
-.switch input[type=checkbox]:checked:active + .slider::after {
-  transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
-}
-
-.button,
-.button1 {
-  background-color: #ffffff;
-  font-weight: 200;
-  font-family: nunito;
-  border-width: 1px;
-  padding: 1rem 4rem;
-  font-size: 1.4rem;
-  margin: 2rem;
-  height: 4.1rem;
-}
-.button:hover,
-.button1:hover {
-  color: #c9a16e;
-  box-shadow: 0px -1px #c9a16e inset;
 }
 
 .most-watched {
@@ -465,73 +349,30 @@ li {
   font-weight: 200;
 }
 
-.Menu-container {
-  height: 25px;
-  width: 30px;
-  cursor: pointer;
-  margin: 10% auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.line {
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background-color: black;
-  transition: 0.4s ease;
-}
-
-#hamburger-input {
-  display: none;
-}
-
-.line::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background-color: black;
-  top: -8px;
-  transition: 0.4s ease;
-}
-
-.line::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background-color: black;
-  top: 8px;
-}
-
-#hamburger-input:checked + label #active {
-  transform: rotate(45deg);
-  background-color: #c9a16e;
-}
-
-#hamburger-input:checked + label #active::before {
-  transform: rotate(-90deg) translateX(-8px);
-  background-color: #c9a16e;
-}
-
-#hamburger-input:checked + label #active::after {
-  display: none;
-}
-
-.black-time-box {
-  background-color: black;
-  width: 50px;
-  height: 25px;
-  color: white;
-  font-size: 1.2rem;
-  padding: 2px 0 1px 5px;
-  position: relative;
-}
-
-.time {
-  position: absolute;
-  margin: 0;
+@media screen and (min-width: 800px) {
+  .row1-header {
+    justify-content: space-around;
+    margin: 0 2rem;
+    padding: 0;
+  }
+  h1 {
+    font-size: 0;
+  }
+  svg.header-logo {
+    width: 37rem;
+    padding-right: 2.5rem;
+  }
+  .row1-header-left {
+    width: 75vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .row1-header-right {
+    width: 25vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .icon {
+    margin: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

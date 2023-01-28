@@ -1,0 +1,107 @@
+.overlay-menu {
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  transform: translateY(-120%);
+  transition: transform 0.5s ease-in;
+}
+.overlay-menu .icons-container svg {
+  width: 1.8rem;
+  margin: 0.5rem;
+}
+
+#hamburger-input:checked ~ .overlay-menu {
+  transform: translateY(5.5%);
+}
+
+.overlay-menu ul li {
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+}
+
+.overlay-menu ul li:hover {
+  background-color: white;
+  color: black;
+  border-left: 2px solid #c9a16e;
+}
+
+nav ul ul {
+  display: none;
+}
+
+.Menu-container {
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  margin: 10% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  transition: 0.4s ease;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  top: -8px;
+  transition: 0.4s ease;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  top: 8px;
+}
+
+#hamburger-input:checked + label #active {
+  transform: rotate(45deg);
+  background-color: #c9a16e;
+}
+
+#hamburger-input:checked + label #active::before {
+  transform: rotate(-90deg) translateX(-8px);
+  background-color: #c9a16e;
+}
+
+#hamburger-input:checked + label #active::after {
+  display: none;
+}
+
+.black-time-box {
+  background-color: black;
+  width: 50px;
+  height: 25px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 2px 0 1px 5px;
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  margin: 0;
+}/*# sourceMappingURL=menu.css.map */
