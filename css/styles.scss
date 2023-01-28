@@ -436,7 +436,22 @@ li {
   .scroll-menu ul {
     justify-content: center;
   }
+  .subscribe-to-newsletter form {
+    margin: 0 15rem;
+  }
+  .most-watched {
+    flex-direction: row;
+  }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
+  .around-the-world-content-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .around-the-world-top,
+  .around-the-world-bottom {
+    display: flex;
+    gap: 2rem;
+  }
 }
