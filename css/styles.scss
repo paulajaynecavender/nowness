@@ -243,6 +243,7 @@ svg.header-logo {
   padding-top: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   h3 {
     padding-bottom: 2rem;
   }
@@ -254,6 +255,7 @@ svg.header-logo {
   align-items: center;
   margin-top: 2.5rem;
   margin-bottom: 0;
+  max-width: 37rem;
   img {
     max-width: 100%;
   }
@@ -472,12 +474,12 @@ li {
   }
   .most-watched {
     flex-direction: row;
+    justify-content: space-evenly;
   }
   .connect {
     .icons-container {
       margin: 0 auto;
       max-width: 50rem;
-      margin-bottom: 4rem;
     }
     svg {
       margin: 3rem;
