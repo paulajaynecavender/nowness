@@ -416,7 +416,7 @@ li {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1024) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   .around-the-world-content-container {
     flex-direction: row;
     justify-content: space-between;
