@@ -266,15 +266,23 @@ svg.header-logo {
 .share-the-love-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .social-detail {
   display: none;
 }
+// community
+.community {
+  margin: 0 9rem;
+}
+.community div {
+  padding: 2rem 2rem 7rem 2rem;
+}
+
 // become-a-member
 .become-a-member {
   @include flex-column-center;
   text-align: center;
-  padding: 2rem 2rem 7rem 2rem;
 }
 .join {
   font-size: 1.6rem;
@@ -309,6 +317,8 @@ svg.header-logo {
 }
 h3.more {
   padding: 10px 0px 5px;
+  text-align: left;
+  font-size: 1.9rem;
 }
 
 // footer
@@ -373,6 +383,27 @@ li {
     justify-content: space-between;
     gap: 2rem;
     img {
+      max-width: 100%;
+    }
+  }
+
+  // community
+  .community {
+    margin: 0 10rem;
+  }
+
+  // more to love
+  .more-to-love-content {
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .more-to-love-content-card {
+    width: 300px;
+    img {
+      width: auto;
       max-width: 100%;
     }
   }
@@ -442,6 +473,20 @@ li {
   .most-watched {
     flex-direction: row;
   }
+  .connect {
+    .icons-container {
+      margin: 0 auto;
+      max-width: 50rem;
+      margin-bottom: 4rem;
+    }
+    svg {
+      margin: 3rem;
+    }
+  }
+  // community
+  .community {
+    margin: 0 15rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -453,5 +498,38 @@ li {
   .around-the-world-bottom {
     display: flex;
     gap: 2rem;
+  }
+  .community {
+    display: flex;
+    margin: 0;
+    padding: 4rem;
+  }
+  .community div {
+    width: 50%;
+  }
+  .connect {
+    @include flex-column-center;
+    .icons-container {
+      padding: 0;
+      margin: 1rem;
+      justify-content: space-between;
+      grid-template-columns: repeat(4, auto);
+    }
+    svg {
+      background-color: #c9a16e;
+      margin: 0;
+    }
+  }
+  // more-to-love
+  .more-to-love-content-card {
+    flex-direction: row;
+    img {
+      width: 150px;
+      height: 150px;
+      margin-right: 3rem;
+    }
+    h3 {
+      padding-top: 0;
+    }
   }
 }

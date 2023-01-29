@@ -83,18 +83,29 @@ $font-bold: 900;
 
 // button
 
-.button,
-.button1 {
+.button {
   background-color: $lightgrey;
   font-weight: $font-light;
   font-family: nunito;
   border-width: 1px;
-  padding: 1rem 4rem;
   font-size: 1.4rem;
-  margin: 2rem;
+  padding: 0.5rem;
   height: 4.1rem;
+  margin: 1rem;
   &:hover {
     color: $gold;
     box-shadow: 0px -1px $gold inset;
   }
+}
+
+.like {
+  width: 12rem;
+  margin-bottom: 3rem;
+}
+.subscribe {
+  width: 15rem;
+  margin-bottom: 2rem;
+}
+.member {
+  width: 28rem;
 }
