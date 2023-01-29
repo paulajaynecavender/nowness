@@ -532,4 +532,19 @@ li {
       padding-top: 0;
     }
   }
+  .links-end ul {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 5rem 0;
+    li {
+      padding: 1rem;
+    }
+  }
+  .copyright {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding-bottom: 2rem;
+  }
 }
