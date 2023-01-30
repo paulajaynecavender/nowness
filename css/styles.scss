@@ -583,4 +583,12 @@ li {
     padding-bottom: 2rem;
   }
   // share-the-love
+  .share-the-love-content {
+    flex-direction: row;
+    width: 100%;
+  }
+  .share-the-love-left,
+  .share-the-love-right {
+    width: 50%;
+  }
 }

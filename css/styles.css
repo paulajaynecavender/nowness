@@ -576,4 +576,12 @@ li {
     margin: 0;
     padding-bottom: 2rem;
   }
+  .share-the-love-content {
+    flex-direction: row;
+    width: 100%;
+  }
+  .share-the-love-left,
+.share-the-love-right {
+    width: 50%;
+  }
 }/*# sourceMappingURL=styles.css.map */
