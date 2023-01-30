@@ -419,6 +419,36 @@ li {
     width: auto;
     max-width: 100%;
   }
+  .social-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+  }
+  .social-detail p:nth-child(1) {
+    font-size: 2.1rem;
+  }
+  .social-detail * {
+    margin-bottom: 1rem;
+  }
+  .social-detail .description-1 {
+    text-align: center;
+  }
+  .share-the-love-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+  }
+  .social {
+    flex-basis: 30rem;
+  }
+  .share-the-love-right,
+.share-the-love-left {
+    display: flex;
+  }
+  .share-the-love-card .button {
+    display: none;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .around-the-world-content-container {

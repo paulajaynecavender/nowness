@@ -51,6 +51,7 @@ h4 {
   font-size: 1.7rem;
   font-weight: $font-light;
 }
+
 .line-border {
   border-color: $gold;
   border-style: solid none none none;
@@ -411,6 +412,35 @@ li {
       max-width: 100%;
     }
   }
+  // share the love
+  .social-detail {
+    @include flex-column-center;
+    padding: 4rem;
+    p:nth-child(1) {
+      font-size: 2.1rem;
+    }
+    * {
+      margin-bottom: 1rem;
+    }
+    .description-1 {
+      text-align: center;
+    }
+  }
+  .share-the-love-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+  }
+  .social {
+    flex-basis: 30rem;
+  }
+  .share-the-love-right,
+  .share-the-love-left {
+    display: flex;
+  }
+  .share-the-love-card .button {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -552,4 +582,5 @@ li {
     margin: 0;
     padding-bottom: 2rem;
   }
+  // share-the-love
 }
