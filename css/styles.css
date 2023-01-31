@@ -295,7 +295,7 @@ svg.header-logo {
 }
 
 .community div {
-  padding: 2rem 2rem 7rem 2rem;
+  padding: 2rem 4rem 7rem;
 }
 
 .become-a-member {
@@ -306,7 +306,7 @@ svg.header-logo {
 }
 
 .join {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .small {
@@ -462,6 +462,10 @@ li {
   .share-the-love-card .button {
     display: none;
   }
+  .social-banner .icons-container {
+    grid-template-columns: repeat(8, auto);
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .around-the-world-content-container {
@@ -517,7 +521,20 @@ li {
   }
   .most-watched {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+  .most-watched-card {
+    padding: 0 3rem;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+  }
+  .container1 {
+    border-right: 0.1rem solid #c9a16e;
+  }
+  .most-watched-content-card {
+    max-width: 37rem;
+    margin: 0 3rem;
   }
   .connect .icons-container {
     margin: 0 auto;
@@ -540,6 +557,9 @@ li {
     display: flex;
     gap: 2rem;
   }
+  .become-a-member {
+    border-right: 0.1rem solid #000;
+  }
   .community {
     display: flex;
     margin: 0;
@@ -555,13 +575,8 @@ li {
   }
   .connect .icons-container {
     padding: 0;
-    margin: 1rem;
-    justify-content: space-between;
-    grid-template-columns: repeat(4, auto);
-  }
-  .connect svg {
-    background-color: #c9a16e;
     margin: 0;
+    width: 95%;
   }
   .more-to-love-content-card {
     flex-direction: row;
@@ -574,20 +589,28 @@ li {
   .more-to-love-content-card h3 {
     padding-top: 0;
   }
+  .links-end {
+    margin: 0 2rem;
+    padding: 0 2rem;
+  }
   .links-end ul {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
     padding: 5rem 0;
   }
   .links-end ul li {
     padding: 1rem;
+    font-size: 1.4rem;
   }
   .copyright {
     flex-direction: row;
     justify-content: space-around;
     margin: 0;
     padding-bottom: 2rem;
+  }
+  .copyright p {
+    font-size: 1.4rem;
   }
   .share-the-love-content {
     flex-direction: row;
