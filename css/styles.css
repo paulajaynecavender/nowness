@@ -1,3 +1,11 @@
+@font-face {
+  font-family: FuturaLight;
+  src: url(../font/FuturaPTLight.otf);
+}
+@font-face {
+  font-family: FuturaBold;
+  src: url(../font/FuturaPTBold.otf);
+}
 html {
   font-size: 62.5%;
 }
@@ -9,14 +17,17 @@ html {
 }
 
 body {
-  font-family: nunito, sans-serif;
+  font-family: FuturaLight, sans-serif;
   color: black;
   background-color: #ffffff;
 }
 
+p {
+  color: #666;
+}
+
 h3 {
   text-align: center;
-  font-weight: 200;
   font-size: 1.8rem;
   padding-bottom: 2.5rem;
 }
@@ -28,7 +39,7 @@ h4 {
 
 .description-1 {
   font-size: 1.7rem;
-  font-weight: 200;
+  color: #666;
 }
 
 .line-border {
@@ -105,7 +116,8 @@ svg.header-logo {
 .scroll-menu ul li {
   display: inline-block;
   padding: 12px 20px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #666;
 }
 
 .container {
@@ -131,11 +143,11 @@ svg.header-logo {
   padding-top: 4rem;
 }
 .today-text h2 {
+  font-family: FuturaBold;
   font-size: 2.4rem;
 }
 .today-text p {
   font-size: 1.4rem;
-  font-weight: 200;
 }
 
 .headline-container {
@@ -163,7 +175,6 @@ svg.header-logo {
 }
 .recent-uploads-card p {
   font-size: 1.3rem;
-  font-weight: 200;
   padding: 0.6rem;
 }
 .recent-uploads-card p:nth-child(3) {
@@ -296,12 +307,10 @@ svg.header-logo {
 
 .join {
   font-size: 1.6rem;
-  font-weight: 200;
 }
 
 .small {
   font-size: 1.2rem;
-  font-weight: 200;
 }
 .small .sign-in a {
   color: #c9a16e;
@@ -328,17 +337,19 @@ svg.header-logo {
   margin-bottom: 25px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 200px;
+  width: 20rem;
   margin-bottom: 5rem;
 }
 .more-to-love-content-card img {
-  width: 200px;
+  width: 20rem;
 }
 
-h3.more {
-  padding: 10px 0px 5px;
+h4.more {
+  padding-bottom: 0.5rem;
   text-align: left;
   font-size: 1.9rem;
+  margin: 0;
+  color: #666;
 }
 
 footer p,
@@ -353,7 +364,6 @@ li {
   align-items: center;
   margin: 20px 0 60px;
   list-style: none;
-  font-weight: 200;
 }
 .links-end ul li:hover {
   color: #c9a16e;
@@ -368,7 +378,6 @@ li {
 .copyright p {
   justify-items: center;
   text-align: center;
-  font-weight: 200;
 }
 
 @media screen and (min-width: 600px) {
@@ -390,6 +399,10 @@ li {
     margin: 0 auto;
     color: #ffffff;
     padding: 4rem 12rem 0;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .today-text p {
+    color: #ffffff;
   }
   .play-circle img {
     height: 5rem;
@@ -413,7 +426,7 @@ li {
     align-items: flex-start;
   }
   .more-to-love-content-card {
-    width: 300px;
+    width: 33.3%;
   }
   .more-to-love-content-card img {
     width: auto;

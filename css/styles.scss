@@ -4,9 +4,20 @@ $lightgrey: #ffffff;
 $mediumgrey: #dcdcdc;
 $darkgrey: #ffffff;
 $grey: #f8f8f8;
-$font-light: 200;
+// fix these with new fonts and use grey color
 $font-regular: 700;
 $font-bold: 900;
+$greyfont: #666;
+
+// font
+@font-face {
+  font-family: FuturaLight;
+  src: url(../font/FuturaPTLight.otf);
+}
+@font-face {
+  font-family: FuturaBold;
+  src: url(../font/FuturaPTBold.otf);
+}
 
 // resets
 html {
@@ -18,9 +29,12 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: nunito, sans-serif;
+  font-family: FuturaLight, sans-serif;
   color: black;
   background-color: $lightgrey;
+}
+p {
+  color: $greyfont;
 }
 // mixins
 @mixin card-layout {
@@ -39,7 +53,6 @@ body {
 
 h3 {
   text-align: center;
-  font-weight: $font-light;
   font-size: 1.8rem;
   padding-bottom: 2.5rem;
 }
@@ -49,7 +62,7 @@ h4 {
 }
 .description-1 {
   font-size: 1.7rem;
-  font-weight: $font-light;
+  color: $greyfont;
 }
 
 .line-border {
@@ -122,7 +135,8 @@ svg.header-logo {
   li {
     display: inline-block;
     padding: 12px 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: $greyfont;
   }
 }
 
@@ -149,11 +163,11 @@ svg.header-logo {
 .today-text {
   padding-top: 4rem;
   h2 {
+    font-family: FuturaBold;
     font-size: 2.4rem;
   }
   p {
     font-size: 1.4rem;
-    font-weight: $font-light;
   }
 }
 .headline-container {
@@ -180,7 +194,6 @@ svg.header-logo {
   padding-right: 20px;
   p {
     font-size: 1.3rem;
-    font-weight: $font-light;
     padding: 0.6rem;
   }
   p:nth-child(3) {
@@ -291,11 +304,9 @@ svg.header-logo {
 }
 .join {
   font-size: 1.6rem;
-  font-weight: $font-light;
 }
 .small {
   font-size: 1.2rem;
-  font-weight: $font-light;
   .sign-in a {
     color: $gold;
   }
@@ -314,16 +325,18 @@ svg.header-logo {
 
 .more-to-love-content-card {
   @include card-layout;
-  width: 200px;
+  width: 20rem;
   margin-bottom: 5rem;
   img {
-    width: 200px;
+    width: 20rem;
   }
 }
-h3.more {
-  padding: 10px 0px 5px;
+h4.more {
+  padding-bottom: 0.5rem;
   text-align: left;
   font-size: 1.9rem;
+  margin: 0;
+  color: $greyfont;
 }
 
 // footer
@@ -338,7 +351,6 @@ li {
   @include flex-column-center;
   margin: 20px 0 60px;
   list-style: none;
-  font-weight: $font-light;
   li:hover {
     color: $gold;
   }
@@ -349,7 +361,6 @@ li {
   p {
     justify-items: center;
     text-align: center;
-    font-weight: $font-light;
   }
 }
 
@@ -375,6 +386,10 @@ li {
     margin: 0 auto;
     color: #ffffff;
     padding: 4rem 12rem 0;
+    text-shadow: 1px 1px 2px #000;
+    p {
+      color: #ffffff;
+    }
   }
 
   // play button overlay
@@ -406,7 +421,7 @@ li {
     align-items: flex-start;
   }
   .more-to-love-content-card {
-    width: 300px;
+    width: 33.3%;
     img {
       width: auto;
       max-width: 100%;
