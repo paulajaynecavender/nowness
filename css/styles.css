@@ -98,6 +98,7 @@ svg.header-logo {
 .row1-header-right svg:hover,
 .icons-container svg:hover {
   fill: #c9a16e;
+  cursor: pointer;
 }
 
 .scroll-menu {
@@ -116,6 +117,10 @@ svg.header-logo {
   padding: 12px 20px;
   font-size: 1.3rem;
   color: #666;
+}
+.scroll-menu ul li:hover {
+  color: #c9a16e;
+  cursor: pointer;
 }
 
 .container {

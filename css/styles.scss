@@ -79,7 +79,7 @@ h4 {
   }
 }
 
-//header ---USE GRID TO ALIGN PROPERLY????---
+//header
 .header-container {
   position: fixed;
   width: 100%;
@@ -121,6 +121,7 @@ svg.header-logo {
 .row1-header-right svg:hover,
 .icons-container svg:hover {
   fill: $gold;
+  cursor: pointer;
 }
 
 .scroll-menu {
@@ -139,6 +140,10 @@ svg.header-logo {
     padding: 12px 20px;
     font-size: 1.3rem;
     color: $greyfont;
+    &:hover {
+      color: $gold;
+      cursor: pointer;
+    }
   }
 }
 
