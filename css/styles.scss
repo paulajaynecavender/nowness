@@ -93,20 +93,14 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 7fr 2fr;
   justify-content: space-between;
-  padding: 0.5rem 5rem 0 1rem;
+  padding: 0.5rem 0.1rem 0 1rem;
   background-color: #ffffff;
   position: absolute;
   top: 0;
   width: 100%;
-  // .row1-header-left {
-  //   display: flex;
-  //   position: relative;
-  // }
 }
 h1 {
   position: relative;
-  // padding: 0.5rem 5rem 0 0;
-  // margin-left: 4.5rem;
   z-index: 999;
   width: 20rem;
 }
@@ -123,7 +117,10 @@ svg.header-logo {
   fill: $gold;
   cursor: pointer;
 }
-
+.row1-header-right {
+  display: flex;
+  justify-content: center;
+}
 .scroll-menu {
   border-top: 1px solid $mediumgrey;
   overflow: auto;
@@ -534,10 +531,7 @@ li {
     display: flex;
     align-items: center;
   }
-  .row1-header-right {
-    display: flex;
-    justify-content: space-evenly;
-  }
+
   .icon {
     margin: 1.5rem;
   }
