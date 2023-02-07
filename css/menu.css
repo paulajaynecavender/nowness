@@ -1,14 +1,16 @@
 .overlay-menu {
   position: absolute;
-  top: 40px;
+  top: 4rem;
   left: -10px;
-  width: 100vw;
+  width: 110vw;
   height: 100vh;
   z-index: -10;
   background-color: #f8f8f8;
   overflow: hidden;
   transform: translateY(-120%);
   transition: transform 0.5s ease-in;
+  overflow: auto;
+  cursor: pointer;
 }
 .overlay-menu .icons-container svg {
   width: 1.8rem;
@@ -21,14 +23,20 @@
 
 .overlay-menu ul li {
   font-weight: 700;
-  font-size: 1.4rem;
-  padding: 10px 15px;
+  font-size: 1.6rem;
+  padding: 1rem 1rem 1rem 3rem;
+  list-style-type: none;
 }
 
 .overlay-menu ul li:hover {
   background-color: white;
   color: black;
-  border-left: 2px solid #c9a16e;
+}
+
+li .icons-container {
+  padding: 0;
+  grid-template-columns: repeat(4, 25%);
+  justify-content: space-around;
 }
 
 nav ul ul {
@@ -104,4 +112,25 @@ nav ul ul {
 .time {
   position: absolute;
   margin: 0;
+}
+
+@media screen and (min-width: 738px) {
+  .overlay-menu {
+    top: 3rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .overlay-menu {
+    width: 24.5rem;
+  }
+  li .icons-container {
+    padding: 0;
+    grid-template-columns: repeat(4, 4rem);
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 800px) {
+  .overlay-menu {
+    top: 7rem;
+  }
 }/*# sourceMappingURL=menu.css.map */
