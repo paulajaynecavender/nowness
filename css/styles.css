@@ -244,7 +244,7 @@ svg.header-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 12rem;
+  margin: 0 0rem;
   max-width: 42.5rem;
 }
 .subscribe-to-newsletter h3 {
