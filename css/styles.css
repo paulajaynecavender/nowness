@@ -653,4 +653,13 @@ li {
   .share-the-love-right {
     width: 50%;
   }
+}
+@media screen and (min-width: 1444px) {
+  .main-content,
+  header,
+  .header-container,
+  footer {
+    max-width: 1444px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=styles.css.map */
