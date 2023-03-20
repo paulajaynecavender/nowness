@@ -140,8 +140,15 @@ svg.header-logo {
   position: relative;
 }
 
-.headline-image img {
-  position: relative;
+.headline-img-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 22rem;
+}
+
+.headline-img-container img {
   width: 100%;
   height: 22rem;
   -o-object-fit: cover;
@@ -406,7 +413,10 @@ li {
   .container:not(.today) {
     padding: 4.5rem 2.5rem;
   }
-  .headline-image img {
+  .headline-img-container img {
+    height: 35rem;
+  }
+  .headline-img-container::before {
     height: 35rem;
   }
   .today-text {
@@ -417,7 +427,6 @@ li {
     margin: 0 auto;
     color: #ffffff;
     padding: 4rem 3.8rem 0;
-    text-shadow: 1px 1px 2px #000;
   }
   .today-text p {
     color: #ffffff;
@@ -499,7 +508,10 @@ li {
   }
 }
 @media screen and (min-width: 800px) {
-  .headline-image img {
+  .headline-img-container img {
+    height: 55rem;
+  }
+  .headline-img-container::before {
     height: 55rem;
   }
   .play-circle {
