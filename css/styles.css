@@ -221,6 +221,10 @@ svg.header-logo {
 .recent-uploads-card p:nth-child(3) {
   font-size: 1.5rem;
 }
+.recent-uploads-card img {
+  height: 16rem;
+  width: 25rem;
+}
 
 .card-container {
   display: flex;
@@ -248,8 +252,14 @@ svg.header-logo {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.content-card .img-container {
+  aspect-ratio: 535/340;
+}
 .content-card img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .subscribe-to-newsletter {
@@ -315,7 +325,8 @@ svg.header-logo {
   max-width: 37rem;
 }
 .most-watched-content-card img {
-  max-width: 100%;
+  width: 37rem;
+  height: 23.5rem;
 }
 
 .share-the-love {
@@ -391,11 +402,14 @@ svg.header-logo {
   margin-bottom: 5rem;
 }
 .more-to-love-content-card img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 20rem;
+  height: 20rem;
 }
 
 h4.more {
-  padding-bottom: 0.5rem;
+  padding: 1.2rem 0 0.5rem 0;
   text-align: left;
   font-size: 1.9rem;
   margin: 0;
@@ -484,11 +498,12 @@ li {
     align-items: flex-start;
   }
   .more-to-love-content-card {
-    width: 33.3%;
+    width: 30%;
   }
   .more-to-love-content-card img {
     width: auto;
-    max-width: 100%;
+    max-width: 30rem;
+    height: auto;
   }
   .social-detail {
     display: flex;
