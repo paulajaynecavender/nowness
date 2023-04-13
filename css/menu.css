@@ -72,7 +72,6 @@ i {
 
 .menu-container i:last-child {
   top: 18px;
-  background-color: black;
 }
 
 #hamburger-input:checked + label i:nth-child(2) {
@@ -109,5 +108,8 @@ i {
 @media screen and (min-width: 800px) {
   .overlay-menu {
     top: 7rem;
+  }
+  .menu-container:hover i {
+    background-color: #c9a16e;
   }
 }/*# sourceMappingURL=menu.css.map */

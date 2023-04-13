@@ -19,7 +19,7 @@ html {
 body {
   font-family: FuturaLight, sans-serif;
   color: black;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 p {
@@ -132,7 +132,7 @@ svg.header-logo {
 }
 
 .scroll-menu {
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid #8a8a8a;
   overflow: auto;
   white-space: nowrap;
   background-color: #ffffff;
@@ -217,6 +217,14 @@ svg.header-logo {
 .recent-uploads-card p {
   font-size: 1.3rem;
   padding: 0.6rem;
+}
+.recent-uploads-card p:first-child:hover {
+  color: #c9a16e;
+  cursor: pointer;
+}
+.recent-uploads-card p:last-child:hover {
+  color: #8a8a8a;
+  cursor: pointer;
 }
 .recent-uploads-card p:nth-child(3) {
   font-size: 1.5rem;
@@ -414,6 +422,10 @@ h4.more {
   font-size: 1.9rem;
   margin: 0;
   color: #666;
+}
+
+.more-to-love-text:hover {
+  cursor: pointer;
 }
 
 footer p,
@@ -628,6 +640,10 @@ li {
   }
   .community {
     margin: 0 15rem;
+  }
+  .more-to-love-text:hover .more,
+  .more-to-love-text:hover .description-1 {
+    color: #c9a16e;
   }
 }
 @media screen and (min-width: 1024px) {

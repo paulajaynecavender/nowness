@@ -1,8 +1,3 @@
-/* .img-container img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-} */
 .img-container {
   display: flex;
   position: relative;
@@ -24,10 +19,7 @@
 .img-container:hover .overlay {
   transform: translateY(0%);
 }
-.img-container:hover img {
-  opacity: 0.65;
-  transition: 0.4s ease;
-}
+
 .overlay-controls {
   width: 15px;
   height: 15px;
@@ -46,4 +38,11 @@
 }
 .controls-container:nth-child(2) {
   padding-left: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .img-container:hover img {
+    opacity: 0.65;
+    transition: 0.4s ease;
+  }
 }

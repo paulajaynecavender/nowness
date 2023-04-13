@@ -1,9 +1,7 @@
 // colours
 $gold: #c9a16e;
-$lightgrey: #ffffff;
-$mediumgrey: #dcdcdc;
-$darkgrey: #ffffff;
-$grey: #f8f8f8;
+$white: #fff;
+$mediumgrey: #8a8a8a;
 $greyfont: #666;
 
 // font
@@ -28,7 +26,7 @@ html {
 body {
   font-family: FuturaLight, sans-serif;
   color: black;
-  background-color: $lightgrey;
+  background-color: $white;
 }
 p {
   color: $greyfont;
@@ -238,6 +236,15 @@ svg.header-logo {
     font-size: 1.3rem;
     padding: 0.6rem;
   }
+  p:first-child:hover {
+    color: $gold;
+    cursor: pointer;
+  }
+  p:last-child:hover {
+    color: $mediumgrey;
+    cursor: pointer;
+  }
+
   p:nth-child(3) {
     font-size: 1.5rem;
   }
@@ -411,6 +418,10 @@ h4.more {
   font-size: 1.9rem;
   margin: 0;
   color: $greyfont;
+}
+
+.more-to-love-text:hover {
+  cursor: pointer;
 }
 
 // footer
@@ -652,6 +663,12 @@ li {
   // community
   .community {
     margin: 0 15rem;
+  }
+
+  //more to love
+  .more-to-love-text:hover .more,
+  .more-to-love-text:hover .description-1 {
+    color: $gold;
   }
 }
 
