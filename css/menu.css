@@ -43,7 +43,7 @@ nav ul ul {
   display: none;
 }
 
-.Menu-container {
+.menu-container {
   height: 25px;
   width: 30px;
   cursor: pointer;
@@ -54,64 +54,41 @@ nav ul ul {
   position: relative;
 }
 
-.line {
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background-color: black;
-  transition: 0.4s ease;
-}
-
 #hamburger-input {
   display: none;
 }
 
-.line::before {
-  content: "";
+i {
   position: absolute;
   height: 2px;
-  width: 25px;
+  width: 18px;
   background-color: black;
-  top: -8px;
-  transition: 0.4s ease;
+  transition: all 0.2s cubic-bezier(0, 0.91, 0.58, 1);
 }
 
-.line::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background-color: black;
-  top: 8px;
+.menu-container i:first-child {
+  top: 5px;
 }
 
-#hamburger-input:checked + label #active {
+.menu-container i:last-child {
+  top: 18px;
+  background-color: black;
+}
+
+#hamburger-input:checked + label i:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-input:checked + label i:first-child {
   transform: rotate(45deg);
   background-color: #c9a16e;
+  transform-origin: left;
 }
 
-#hamburger-input:checked + label #active::before {
-  transform: rotate(-90deg) translateX(-8px);
+#hamburger-input:checked + label i:last-child {
+  transform: rotate(-45deg);
   background-color: #c9a16e;
-}
-
-#hamburger-input:checked + label #active::after {
-  display: none;
-}
-
-.black-time-box {
-  background-color: black;
-  width: 50px;
-  height: 25px;
-  color: white;
-  font-size: 1.2rem;
-  padding: 2px 0 1px 5px;
-  position: relative;
-}
-
-.time {
-  position: absolute;
-  margin: 0;
+  transform-origin: left;
 }
 
 @media screen and (min-width: 738px) {
